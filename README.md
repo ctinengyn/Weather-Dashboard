@@ -39,6 +39,7 @@ A simple web application that allows users to search for a city to get the curre
 
 ## Example
 
+## Deployed Applicaton: https://ctinengyn.github.io/Weather-Dashboard/
 ![Adding workout](images/example1.png)
 
 ## Technologies Used
