@@ -7,7 +7,17 @@
     <a href="https://getbootstrap.com/"><img src="https://img.shields.io/badge/-Bootstrap-blueviolet?style=for-the-badge" alt="Bootstrap" /></a>
 </p>
 
-## Technologies Used:
+## Description
+A simple web application that allows users to search for a city to get the current weather and 5 day forecast. Cities that users previously looked up will be saved in their local storage.
+
+## User Story
+```
+- AS A traveler
+- I WANT to see the weather outlook for multiple cities
+- SO THAT I can plan a trip accordingly
+```
+
+## Technologies Used
 <p><a href="https://openweathermap.org/">OpenWeather API</a></p>
 
 ## Example
