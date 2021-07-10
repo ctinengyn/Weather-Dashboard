@@ -23,3 +23,6 @@ function displayWeather(event){
     }
 }
 
+function displayWeather(city){
+    var apiURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + 
+}
