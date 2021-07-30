@@ -5,94 +5,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <!-- Font Awesome link-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-    <!-- Bootstrap Link-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
-    <!-- Style Sheet for CSS -->
-    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    
     <title>Weather Dashboard</title>
 </head>
 
 <body>
-    <!-- Main heading -->
-    <nav class="navbar navbar-dark bg-dark">
-        <span class="navbar-brand mb-0 h1 w-100 text-center">Weather Dashboard</span>
-    </nav>
-    <!-- End Main heading -->
-
-    <!-- Start container -->
+    <div>
+        <h1>Weather Dashboard</h1>
+    </div>
     <div class="container">
-        <!-- Start row -->
-        <div class="row">
-            <!-- Start column -->
-            <div class="col-4 bg-light">
-                <p class="search-header my-1">Search for a city</p>
+        
+        <nav>
 
-                <!-- Start input group -->
-                <div class="input-group mb-3">
-                    <input id="city-input" type="text" class="form-control" placeholder="Enter city name"
-                        aria-label="Enter city name" />
-                    <div class="input-group-append">
-                        <button class="btn btn-primary" type="button" id="search-button">
-                            <i class="fas fa-search"></i>
-                        </button>
-                    </div>
-                </div>
-                <button class="btn btn-primary mb-3" type="button" id="clear-history">
-                    Clear history
-                </button>
-                <form id="history"></form>
-            </div>
-            <div class="col-8">
-                <div class="row mr-0">
-                    <div class="col-12 border border-dark m-3 rounded">
-                        <div class="row">
-                            <div class="col-12">
-                                <span id="city-name" class="city-name align-middle"></span>
-                                <img id="current-pic" src="placeholder" alt="" />
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <p id="temperature"></p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <p id="humidity"></p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <p id="wind-speed"></p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12 d-flex">
-                                <p id="UV-index"></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <h3>5-Day Forecast</h3>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
-                    <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
-                    <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
-                    <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
-                    <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
-                </div>
-            </div>
+            <form>
+                <label for="location">Location:</label><br>
+                <input type="text" id="location" name="location" size="20" maxlength="50">
+                <a href="#" id="submitBtn">Search</a>
+            </form>
+
+            <section>
+                <span>History:</span>
+                <ul id="history">
+                </ul>
+            </section>
+
+        </nav>
+
+        <span id="dayData"></span>
+        <div id ="currentDay">
         </div>
+
+    </div>
+    <div id="forecast"><h2>5-Day Forecast</h2></div>
+    <div class="container">
     </div>
 
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 
