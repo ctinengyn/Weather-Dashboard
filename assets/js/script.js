@@ -98,12 +98,19 @@ function fiveApi(city) {
       return response.json();
     })
     .then(function (data) {
-      console.log(data);
-      const newDays = data.list.filter(function (element, i) {
-        if (element.dt_txt.indexOf("18:00:00") !== -1) {
-          return element;
+      for (let i = 0; i < data.list.length; i++){
+        if (data.list[i].dt_txt.indexOf("18:00:00") !== -1){
+          console.log (data.list[i])
         }
-      });
+
+      }
+      
+      // console.log(data);
+      // const newDays = data.list.filter(function (element, i) {
+      //   if (element.dt_txt.indexOf("18:00:00") !== -1) {
+      //     return element;
+      //   }
+      // });
       containerEl.innerHTML = "";
       newDays.newData(function (element, i) {
         const card = document.createElement("div");
