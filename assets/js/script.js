@@ -84,7 +84,7 @@ function getLocation() {
   locationHistory();
 }
 
-searchBtnEl.addEventListener("click", getLocations);
+searchBtnEl.addEventListener("click", getLocation);
 
 function fiveApi(city) {
   let fiveUrl =
@@ -105,7 +105,7 @@ function fiveApi(city) {
         }
       });
       containerEl.innerHTML = "";
-      newDays.new(function (element, i) {
+      newDays.newData(function (element, i) {
         const card = document.createElement("div");
         card.classList.add("card");
         const h3 = document.createElement("h3");
