@@ -30,6 +30,7 @@ A simple web application that allows users to search for a city to get the curre
   * Wind speed
 
 ## Example
+![example](images/example1.png)
 
 ## Deployed Applicaton: https://ctinengyn.github.io/Weather-Dashboard/
 
