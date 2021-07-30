@@ -97,23 +97,15 @@ function fiveApi(city) {
     .then(function (response) {
       return response.json();
     })
-    .then(function (data) {
+
+    .then(function (element) {
+      containerEl.innerHTML = "";
+
       for (let i = 0; i < data.list.length; i++){
         if (data.list[i].dt_txt.indexOf("18:00:00") !== -1){
           console.log (data.list[i])
-        }
 
-      }
-      
-      // console.log(data);
-      // const newDays = data.list.filter(function (element, i) {
-      //   if (element.dt_txt.indexOf("18:00:00") !== -1) {
-      //     return element;
-      //   }
-      // });
-      containerEl.innerHTML = "";
-      newDays.newData(function (element, i) {
-        const card = document.createElement("div");
+          const card = document.createElement("div");
         card.classList.add("card");
         const h3 = document.createElement("h3");
         h3.textContent = moment(element.dt_txt).format("M/DD/YY");
@@ -131,6 +123,22 @@ function fiveApi(city) {
         card.appendChild(weekdayIcon);
         card.appendChild(temp).appendChild(hum);
         containerEl.appendChild(card);
-      });
-    });
+        }
+
+      }
+    })
+  
+      
+      
+      // console.log(data);
+      // const newDays = data.list.filter(function (element, i) {
+      //   if (element.dt_txt.indexOf("18:00:00") !== -1) {
+      //     return element;
+      //   }
+      // });
+    //   containerEl.innerHTML = "";
+    //   newDays.newData(function (element, i) {
+        
+    //   });
+    // });
 }
