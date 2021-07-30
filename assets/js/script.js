@@ -101,21 +101,22 @@ function fiveApi(city) {
     .then(function (element) {
       containerEl.innerHTML = "";
       console.log(element);
-      for (let i = 0; i < element.list.length; i++){
-        if (element.list[i].dt_txt.indexOf("18:00:00") !== -1){
-          console.log (element.list[i])
+      for (let i = 0; i < element.list.length; i++) {
+        if (element.list[i].dt_txt.indexOf("18:00:00") !== -1) {
+          console.log(element.list[i]);
           const card = document.createElement("div");
           card.classList.add("card");
           const h3 = document.createElement("h3");
           h3.textContent = moment(element.dt_txt).format("M/DD/YY");
           const weekdayIcon = document.createElement("img");
           weekdayIcon.setAttribute(
-          "src",
-          "https://openweathermap.org/img/w/" + element.list[i].weather[0].icon + ".png"
+            "src",
+            "https://openweathermap.org/img/w/" +
+              element.list[i].weather[0].icon +
+              ".png"
           );
           weekdayIcon.classList.add("icon");
           const temp = document.createElement("p");
-          // element.list[i].weather[0].icon
           temp.textContent = "Temp: " + element.list[i].main.temp_max + "°F";
           const hum = document.createElement("p");
           hum.textContent = "Humidity: " + element.list[i].main.humidity + "%";
@@ -125,17 +126,5 @@ function fiveApi(city) {
           containerEl.appendChild(card);
         }
       }
-    })
-      
-      // console.log(data);
-      // const newDays = data.list.filter(function (element, i) {
-      //   if (element.dt_txt.indexOf("18:00:00") !== -1) {
-      //     return element;
-      //   }
-      // });
-    //   containerEl.innerHTML = "";
-    //   newDays.newData(function (element, i) {
-        
-    //   });
-    // });
+    });
 }
